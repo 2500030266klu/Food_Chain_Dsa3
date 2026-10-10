@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cosmic" data-mode="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodChain Enterprise – Predictive Logistics & Distribution Platform</title>
+    <meta name="description" content="State-of-the-art enterprise food supply logistics platform with biological kinetic spoilage prediction, 24h inventory depletion forecasting, and advanced DSA algorithms.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Ambient Mesmerizing Mesh Background Orbs -->
+    <div class="exotic-bg-ambient" aria-hidden="true">
+        <div class="mesh-orb mesh-orb-1"></div>
+        <div class="mesh-orb mesh-orb-2"></div>
+        <div class="mesh-orb mesh-orb-3"></div>
+    </div>
+
+    <!-- =======================================================================
+         MAIN NAVBAR (PROFESSIONAL & UNCLUTTERED)
+         ======================================================================= -->
+    <header class="main-navbar">
+        <div class="container navbar-content">
+            <div class="brand-section">
+                <div class="brand-logo-icon">🌱</div>
+                <div class="brand-meta">
+                    <h1>FoodChain Enterprise <span class="brand-badge-version">v3.5-PRO</span></h1>
+                    <p>Global Food Supply & Predictive Logistics Management</p>
+                </div>
+            </div>
+
+            <!-- Logistics Metrics Deck -->
+            <div class="nav-metric-deck">
+                <div class="metric-pill" title="Verified Agricultural Producers">
+                    <span class="pill-label">Producers:</span>
+                    <span class="pill-val" id="nav-suppliers-count">48 Verified</span>
+                </div>
+                <div class="metric-pill" title="Active Cold-Chain Storage Warehouses">
+                    <span class="pill-label">Cold Hubs:</span>
+                    <span class="pill-val" id="nav-warehouses-count">12 Facilities</span>
+                </div>
+                <div class="metric-pill" title="Daily In-Transit Freight Volume">
+                    <span class="pill-label">Daily Freight:</span>
+                    <span class="pill-val">1,420 MT</span>
+                </div>
+                <div class="metric-pill" title="Regulatory FSSAI/APEDA Compliance Score">
+                    <span class="pill-label">Compliance:</span>
+                    <span class="pill-val" style="color:var(--brand-emerald);">99.8%</span>
+                </div>
+            </div>
+
+            <!-- Clean Nav Actions -->
+            <div class="nav-actions">
+                <div class="system-status-chip" id="api-status-badge">
+                    <span class="pulse-dot"></span>
+                    <span>REST API ONLINE</span>
+                </div>
+
+                <button id="btn-open-catalog" class="btn-brand-secondary" type="button" title="Explore live agricultural producers, warehouses, and monitored SKUs">
+                    <span>📦 Supply Catalog</span>
+                </button>
+                <button id="btn-open-benchmark" class="btn-benchmark-main" type="button" title="Execute multi-module diagnostic benchmark suite">
+                    <span>⚡ Benchmarks</span>
+                </button>
+                <button id="btn-nav-dataset" class="btn-brand-secondary" type="button" title="Explore Top 50 Fast-Food Chains CSV Dataset">
+                    <span>📊 Fast-Food Dataset</span>
+                </button>
+                <button id="btn-nav-toggle-sidebar" class="btn-brand-secondary" type="button" title="Open Ambient Studio & Lighting Settings" style="border-color:var(--brand-primary); color:var(--text-primary);">
+                    <span>🎨 Ambient Studio</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- =======================================================================
+         MODULE NAVIGATION TABS (PREDICTIVE HUB + DATASET + M1 THROUGH M6)
+         ======================================================================= -->
+    <nav class="module-tab-bar" aria-label="Course Outcome Modules">
+        <div class="container">
+            <div class="tab-list-scroll">
+                <button class="nav-tab-btn active" data-target="predict-section" id="tab-predict">
+                    <span class="nav-tab-badge glow-badge">🔮 AI FORECAST</span>
+                    <span>Predictive Intelligence Hub</span>
+                </button>
+                <button class="nav-tab-btn" data-target="dataset-section" id="tab-dataset">
+                    <span class="nav-tab-badge" style="background:var(--brand-primary); color:#ffffff;">📊 DATASET</span>
+                    <span>Top 50 Chains (CSV)</span>
+                </button>
+                <button class="nav-tab-btn" data-target="module1-section" id="tab-m1">
+                    <span class="nav-tab-badge">M1 • CO1</span>
+                    <span>Pathogen & Product Search</span>
+                </button>
+                <button class="nav-tab-btn" data-target="module2-section" id="tab-m2">
+                    <span class="nav-tab-badge">M2 • CO2</span>
+                    <span>Document & Contract Audit</span>
+                </button>
+                <button class="nav-tab-btn" data-target="module3-section" id="tab-m3">
+                    <span class="nav-tab-badge">M3 • CO3</span>
+                    <span>Relief Cargo & DP Optimization</span>
+                </button>
+                <button class="nav-tab-btn" data-target="module4-section" id="tab-m4">
+                    <span class="nav-tab-badge">M4 • CO4</span>
+                    <span>Cold-Chain Network Flow</span>
+                </button>
+                <button class="nav-tab-btn" data-target="module5-section" id="tab-m5">
+                    <span class="nav-tab-badge">M5 • CO5</span>
+                    <span>Safety Rules & Constraint Satisfaction</span>
+                </button>
+                <button class="nav-tab-btn" data-target="module6-section" id="tab-m6">
+                    <span class="nav-tab-badge">M6 • CO6</span>
+                    <span>IoT Telematics & Stream Analytics</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =======================================================================
+         MAIN WORKBENCH AREA
+         ======================================================================= -->
+    <main class="dashboard-main container">
+
+        <!-- ===================================================================
+             PREDICTIVE INTELLIGENCE & FORECASTING HUB
+             =================================================================== -->
+        <section id="predict-section" class="module-section active">
+            
+            <!-- Professional 8K Hero Image Showcase Banner -->
+            <div class="hero-image-banner-card">
+                <img src="img/foodchain_hero.jpg" alt="FoodChain Cold-Chain Logistics Hub" class="hero-image-banner-img">
+                <div class="hero-image-overlay">
+                    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
+                        <div>
+                            <span class="badge-clean success" style="font-size:11px; margin-bottom:8px;">● LIVE AUTONOMOUS COLD-CHAIN FACILITY</span>
+                            <h2 style="font-size:24px; font-weight:800; color:#ffffff; margin:0; text-shadow:0 2px 10px rgba(0,0,0,0.7);">
+                                Global Cold-Chain Distribution & Predictive Analytics
+                            </h2>
+                            <p style="font-size:13px; color:#cbd5e1; margin-top:4px; max-width:720px; text-shadow:0 1px 4px rgba(0,0,0,0.7);">
+                                Multi-temp reefer telematics across 12 intermodal storage hubs, automated microbiological assay screening, and real-time biological kinetic spoilage forecasting.
+                            </p>
+                        </div>
+                        <div style="display:flex; gap:10px; align-items:center;">
+                            <button id="btn-predict-all-main" class="btn-predict-all" type="button" title="Execute universal predictive forecasting across all monitored SKUs, warehouses, and corridors">
+                                <span>🔮 PREDICT ALL THE THINGS</span>
+                            </button>
+                            <button id="btn-reset-simulation" class="btn-brand-secondary" type="button" style="background:rgba(15,23,42,0.8); color:#ffffff; border-color:rgba(255,255,255,0.2);">
+                                <span>⚡ Reset Defaults</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Visual KPI Grid -->
+            <div class="predict-kpi-grid">
+                <div class="predict-kpi-card">
+                    <div class="predict-kpi-icon" style="color:#10b981;">🌐</div>
+                    <div>
+                        <div class="predict-kpi-val" id="kpi-fleet-health" style="color:#10b981;">94.5%</div>
+                        <div class="predict-kpi-label">Fleet Health Index</div>
+                    </div>
+                </div>
+
+                <div class="predict-kpi-card">
+                    <div class="predict-kpi-icon" style="color:#f59e0b;">🛡️</div>
+                    <div>
+                        <div class="predict-kpi-val" id="kpi-val-at-risk" style="color:#f59e0b;">₹1,45,820</div>
+                        <div class="predict-kpi-label">Value at Spoilage Risk</div>
+                    </div>
+                </div>
+
+                <div class="predict-kpi-card">
+                    <div class="predict-kpi-icon" style="color:#06b6d4;">⏱️</div>
+                    <div>
+                        <div class="predict-kpi-val" id="kpi-freshness-days" style="color:#06b6d4;">84.9 Days</div>
+                        <div class="predict-kpi-label">Mean Shelf-Life Horizon</div>
+                    </div>
+                </div>
+
+                <div class="predict-kpi-card">
+                    <div class="predict-kpi-icon" style="color:#f43f5e;">🚨</div>
+                    <div>
+                        <div class="predict-kpi-val" id="kpi-hazard-alerts" style="color:#f43f5e;">0 Critical</div>
+                        <div class="predict-kpi-label">Pathogen Recall Flags</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive What-If Simulation Sandbox & Dual Charts Grid -->
+            <div class="workbench-grid" style="margin-bottom:24px;">
+                <!-- Left: Simulation Controls & Riskometer -->
+                <div class="card-surface">
+                    <div class="card-topbar">
+                        <div class="card-heading">
+                            <span>🎛️ Interactive What-If Spoilage Simulator</span>
+                        </div>
+                        <span id="sim-product-badge" class="badge-clean info">PRD-101 Selected</span>
+                    </div>
+
+                    <!-- Commodity Selector -->
+                    <div class="input-group">
+                        <div class="input-label-row">
+                            <label for="sim-sku-select">Target Food Commodity SKU</label>
+                            <span class="hint">SELECT PRODUCT</span>
+                        </div>
+                        <select id="sim-sku-select" class="form-input-clean">
+                            <option value="PRD-101">🥬 Organic Baby Spinach (2-4°C, Ethylene Sensitive)</option>
+                            <option value="PRD-102">🥑 Hass Avocados Grade-A (8-12°C, Ethylene Producer)</option>
+                            <option value="PRD-103">🥛 Pasteurized Whole Milk (1-3°C, Rapid Spoilage)</option>
+                            <option value="PRD-104">🐟 Wild Atlantic Salmon Fillet (-1 to 1°C, Deep Chill)</option>
+                            <option value="PRD-105">🍅 Heirloom Vine Tomatoes (10-14°C, Ambient Cool)</option>
+                            <option value="PRD-106">🌾 Red Winter Wheat (15-20°C, Moisture Sensitive)</option>
+                            <option value="PRD-107">🍎 Honeycrisp Apples (1-2°C, Long Storage)</option>
+                            <option value="PRD-108">🥩 Angus Beef Ribeye (-18°C, Frozen Storage)</option>
+                        </select>
+                    </div>
+
+                    <!-- Temperature Slider -->
+                    <div class="input-group">
+                        <div class="input-label-row">
+                            <label>Simulated Container Temperature</label>
+                            <span class="slider-val-tag" id="sim-temp-val">2.5°C</span>
+                        </div>
+                        <div class="slider-control-box">
+                            <input type="range" id="sim-temp-slider" min="-5" max="25" value="2.5" step="0.5">
+                        </div>
+                    </div>
+
+                    <!-- Ambient Relative Humidity Slider -->
+                    <div class="input-group">
+                        <div class="input-label-row">
+                            <label>Ambient Relative Humidity</label>
+                            <span class="slider-val-tag" id="sim-humidity-val">85%</span>
+                        </div>
+                        <div class="slider-control-box">
+                            <input type="range" id="sim-humidity-slider" min="10" max="98" value="85" step="1">
+                        </div>
+                    </div>
+
+                    <!-- In-Transit Duration Slider -->
+                    <div class="input-group">
+                        <div class="input-label-row">
+                            <label>Transit Travel Duration</label>
+                            <span class="slider-val-tag" id="sim-hours-val">12 hrs</span>
+                        </div>
+                        <div class="slider-control-box">
+                            <input type="range" id="sim-hours-slider" min="1" max="72" value="12" step="1">
+                        </div>
+                    </div>
+
+                    <!-- Ethylene Co-Location Toggle -->
+                    <div style="display:flex; justify-content:space-between; align-items:center; background:var(--bg-subtle); padding:10px 14px; border-radius:8px; margin-bottom:16px;">
+                        <div>
+                            <div style="font-weight:700; font-size:12px; color:var(--text-primary);">Ethylene Gas Co-Location Exposure</div>
+                            <div style="font-size:11px; color:var(--text-muted);">Co-stored near ethylene-emitting fruits</div>
+                        </div>
+                        <label style="display:inline-flex; align-items:center; cursor:pointer;">
+                            <input type="checkbox" id="sim-ethylene-toggle" style="width:18px; height:18px; accent-color:var(--brand-primary); cursor:pointer;">
+                        </label>
+                    </div>
+
+                    <!-- Run Prediction Action -->
+                    <button id="btn-run-sim" class="btn-brand-primary" type="button" style="width:100%; justify-content:center;">
+                        <span>⚡ Run Kinetic Spoilage Forecast</span>
+                    </button>
+
+                    <!-- Circular Riskometer Dial Container -->
+                    <div id="sim-riskometer-wrap" style="margin-top:16px; border-top:1px solid var(--border-subtle); padding-top:10px;">
+                        <!-- Rendered by Visualizers.renderRiskometer -->
+                    </div>
+
+                    <!-- Prescriptive AI Directive Callout -->
+                    <div id="sim-directive-wrap" style="margin-top:10px;">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+
+                <!-- Right: Dynamic SVG Charts -->
+                <div style="display:flex; flex-direction:column; gap:18px;">
+                    <!-- Spoilage vs Temperature Arrhenius SVG Curve -->
+                    <div id="sim-spoilage-chart-wrap">
+                        <!-- Rendered by Visualizers.renderSpoilageGraph -->
+                    </div>
+
+                    <!-- 24-Hour Depletion Velocity Curve -->
+                    <div id="sim-depletion-chart-wrap">
+                        <!-- Rendered by Visualizers.renderDepletionChart -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparative Commodity Freshness Bar Chart -->
+            <div id="predict-benchmark-bars-wrap" style="margin-bottom:24px;">
+                <!-- Rendered by Visualizers.renderMultiCommodityBarChart -->
+            </div>
+
+            <!-- Full 8 Commodity Visual Cards Grid -->
+            <div style="margin-bottom:24px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+                    <h3 style="font-size:16px; font-weight:800; color:var(--text-primary); margin:0;">
+                        📦 Commodity Fleet Scorecards & Spoilage Monitors
+                    </h3>
+                    <span style="font-size:12px; color:var(--text-muted);">Click any card to simulate in What-If Sandbox</span>
+                </div>
+                <div id="predict-scorecards-grid-wrap">
+                    <!-- Rendered by Visualizers.renderCommodityCardsGrid -->
+                </div>
+            </div>
+
+            <!-- Prescriptive Directives & Bottleneck Grid -->
+            <div id="predict-directives-grid-wrap">
+                <!-- Rendered by Visualizers.renderUniversalSummary -->
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             DATASET & FAST-FOOD CHAINS EXPLORER (TOP 50 CSV & INDIA SYNC)
+             =================================================================== -->
+        <section id="dataset-section" class="module-section">
+            <div class="application-hero-card">
+                <div>
+                    <div class="app-hero-header">
+                        <span>📊 Top 50 Fast-Food Chains Dataset & Indian Food Logistics Synchronization</span>
+                    </div>
+                    <div class="app-hero-desc">
+                        Synchronized with <code>Dataset/Top 50 Fast-Food Chains in USA.csv</code> and converted to <strong>Indian Rupees (₹ Crores & Lakhs)</strong>. Cross-mapped across all 6 Course Outcome algorithms (M1–M6) for brand safety, franchise audits, knapsack relief bundles, intermodal highway flows, and IoT reefer telematics.
+                    </div>
+                </div>
+                <div class="app-hero-tags">
+                    <span class="badge-tag-clean highlight">₹ INR Synchronized</span>
+                    <span class="badge-tag-clean">50 Major Chains</span>
+                    <span class="badge-tag-clean">215K+ Outlets</span>
+                    <span class="badge-tag-clean">FSSAI & APEDA Standard</span>
+                </div>
+            </div>
+
+            <!-- Dataset Executive Metrics Deck -->
+            <div class="predict-kpi-grid" style="margin-bottom:20px;">
+                <div class="predict-kpi-card">
+                    <div class="predict-kpi-icon" style="color:#2563eb;">💰</div>
+                    <div>
+                        <div class="predict-kpi-val" id="ds-kpi-sales" style="color:#2563eb;">₹2,84,390 Cr</div>
+                        <div class="predict-kpi-label">Total Systemwide Revenue</div>
+                    </div>
+                </div>
+                <div class="predict-kpi-card">
+                    <div class="predict-kpi-icon" style="color:#10b981;">🏪</div>
+                    <div>
+                        <div class="predict-kpi-val" id="ds-kpi-units" style="color:#10b981;">2,15,480</div>
+                        <div class="predict-kpi-label">Active Monitored Outlets</div>
+                    </div>
+                </div>
+                <div class="predict-kpi-card">
+                    <div class="predict-kpi-icon" style="color:#0891b2;">📈</div>
+                    <div>
+                        <div class="predict-kpi-val" id="ds-kpi-avg-sales" style="color:#0891b2;">₹28.4 L/unit</div>
+                        <div class="predict-kpi-label">Avg Store Sales Velocity</div>
+                    </div>
+                </div>
+                <div class="predict-kpi-card">
+                    <div class="predict-kpi-icon" style="color:#f59e0b;">🇮🇳</div>
+                    <div>
+                        <div class="predict-kpi-val" id="ds-kpi-india-brands" style="color:#f59e0b;">15+ Brands</div>
+                        <div class="predict-kpi-label">Active India Metro Footprint</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dataset Visuals Workbench (Bar Chart & Category Distribution) -->
+            <div id="dataset-visuals-workbench" style="margin-bottom:24px;">
+                <div style="text-align:center; padding:40px;"><span class="loader-spin"></span> Loading dataset visual graphs...</div>
+            </div>
+
+            <!-- Searchable Dataset Table Surface -->
+            <div class="card-surface" style="margin-bottom:24px;">
+                <div class="card-topbar">
+                    <div class="card-heading">
+                        <span>📋 Master Food Chains Directory & Analytics (CSV Records)</span>
+                    </div>
+                    <div style="display:flex; gap:10px; align-items:center;">
+                        <input type="text" id="dataset-search-input" class="form-input-clean" placeholder="Search chain brand..." style="max-width:220px; font-size:12px; padding:6px 12px;">
+                        <select id="dataset-category-filter" class="form-input-clean" style="max-width:200px; font-size:12px; padding:6px 10px;">
+                            <option value="ALL">All Categories</option>
+                            <option value="Burgers & Sandwiches">Burgers & Sandwiches</option>
+                            <option value="Pizza & Bakery">Pizza & Bakery</option>
+                            <option value="Poultry & Quick Service">Poultry & Quick Service</option>
+                            <option value="Beverages & Dairy">Beverages & Dairy</option>
+                            <option value="Mexican & Fresh Produce">Mexican & Produce</option>
+                            <option value="Frozen Desserts & Fruits">Desserts & Ice-Cream</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="dataset-table-workbench">
+                    <div style="text-align:center; padding:30px;"><span class="loader-spin"></span> Loading CSV records...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             MODULE 1: STRING ALGORITHMS (M1 – CO1)
+             =================================================================== -->
+        <section id="module1-section" class="module-section">
+            <div class="application-hero-card">
+                <div>
+                    <div class="app-hero-header">
+                        <span>🏢 Pathogen Recall Protocol & Brand Search • M1 – CO1</span>
+                    </div>
+                    <div class="app-hero-desc">
+                        Rapid automated pathogen screening across manifests for <em>Salmonella, Listeria</em>, and fast-food chain brands via linear Aho-Corasick & KMP search.
+                    </div>
+                </div>
+                <div class="app-hero-tags">
+                    <span class="badge-tag-clean highlight">Aho-Corasick: O(n + z)</span>
+                    <span class="badge-tag-clean">KMP: O(n + m)</span>
+                    <span class="badge-tag-clean">Rabin-Karp: Rolling Hash</span>
+                </div>
+            </div>
+
+            <div class="workbench-grid">
+                <div class="card-surface">
+                    <div class="card-topbar">
+                        <div class="card-heading">
+                            <span>🔍 Inspection Document & Search Controls</span>
+                        </div>
+                        <span id="m1-alert-count" class="badge-clean info">Ready to Scan</span>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-label-row">
+                            <label for="m1-report-select">Preset Regulatory Audit Report</label>
+                            <span class="hint">FSSAI & APEDA</span>
+                        </div>
+                        <select id="m1-report-select" class="form-input-clean">
+                            <option value="spinach">Lot #PLK-982: Punjab Agri-Farmers Palak (FSSAI Swab Test)</option>
+                            <option value="salmon">Shipment SHIP-MH-9021: Malabar Tiger Prawns (APEDA Marine Protocol)</option>
+                            <option value="wheat">Silo 4 Bin #12: Punjab Central Silo Basmati Grain (AGMARK ELISA)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-label-row">
+                            <label for="m1-doc-text">Audit Document Content</label>
+                            <span class="hint">EDITABLE MANIFEST</span>
+                        </div>
+                        <textarea id="m1-doc-text" class="form-input-clean" rows="5">FSSAI AUDIT SUMMARY: Punjab Agri-Farmers Producer Co-op, Lot #PLK-982-PB. 
+Standard bacteriological swab tests were conducted across washing flumes and cold-storage partitions. 
+RESULTS: Zero detection of salmonella enterica and escherichia coli strains. 
+Aerobic plate count is fully compliant with FSSAI Food Safety and Standards (Packaging & Labelling) Regulations 2020. 
+WARNING NOTICE: Trace humidity in reefer transit van RFC-4402 could promote fungal spoilage if cold-chain temperature fluctuates above 4.5 degrees celsius. 
+All crate seals verified intact with tamper-evident AGMARK RFID barcode.</textarea>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-label-row">
+                            <label for="m1-query-pattern">Target Query Term / Barcode</label>
+                            <span class="hint">EXACT PATTERN</span>
+                        </div>
+                        <input type="text" id="m1-query-pattern" class="form-input-clean" value="salmonella" placeholder="e.g. salmonella, McDonald’s, Domino's, FSSAI">
+                        <div style="margin-top:8px; display:flex; flex-wrap:wrap; gap:6px;">
+                            <span style="font-size:10px; font-weight:700; color:var(--text-muted); align-self:center;">QUICK PRESETS:</span>
+                            <button class="badge-clean info btn-quick-search-co1" data-query="McDonald’s" type="button" style="cursor:pointer;">McDonald’s</button>
+                            <button class="badge-clean info btn-quick-search-co1" data-query="Domino's" type="button" style="cursor:pointer;">Domino's</button>
+                            <button class="badge-clean info btn-quick-search-co1" data-query="Subway" type="button" style="cursor:pointer;">Subway</button>
+                            <button class="badge-clean info btn-quick-search-co1" data-query="KFC" type="button" style="cursor:pointer;">KFC</button>
+                            <button class="badge-clean danger btn-quick-search-co1" data-query="salmonella" type="button" style="cursor:pointer;">Salmonella</button>
+                            <button class="badge-clean danger btn-quick-search-co1" data-query="listeria" type="button" style="cursor:pointer;">Listeria</button>
+                        </div>
+                    </div>
+
+                    <div class="btn-row">
+                        <button id="btn-m1-aho" class="btn-brand-primary" type="button" title="Simultaneously scans all biological hazard keywords via Aho-Corasick automaton">
+                            <span>⚡ Aho-Corasick Multi-Hazard</span>
+                        </button>
+                        <button id="btn-m1-kmp" class="btn-brand-secondary" type="button" title="Exact single-pattern search via KMP prefix table">
+                            <span>KMP Search</span>
+                        </button>
+                        <button id="btn-m1-z" class="btn-brand-secondary" type="button" title="Computes Z-array to detect repeated product certification boilerplate">
+                            <span>Z-Algorithm</span>
+                        </button>
+                        <button id="btn-m1-rk" class="btn-brand-secondary" type="button" title="Rolling hash string search for shipment codes">
+                            <span>Rabin-Karp</span>
+                        </button>
+                    </div>
+
+                    <div id="m1-docket" class="execution-metric-panel" style="display:none;">
+                        <div class="metric-panel-header">
+                            <span class="metric-panel-title">TELEMETRY & ALGORITHM PROFILE</span>
+                            <span class="metric-pill-status">HTTP 200 OK</span>
+                        </div>
+                        <div class="metric-stat-row">
+                            <div class="metric-stat-box"><div class="metric-stat-label">Execution Time</div><div class="metric-stat-num emerald" id="m1-metric-time">0.00 ms</div></div>
+                            <div class="metric-stat-box"><div class="metric-stat-label">Precise Nanos</div><div class="metric-stat-num cyan" id="m1-metric-nanos">0 ns</div></div>
+                            <div class="metric-stat-box"><div class="metric-stat-label">Client Latency</div><div class="metric-stat-num amber" id="m1-metric-latency">0 ms</div></div>
+                        </div>
+                        <div class="metric-summary-text" id="m1-docket-summary"></div>
+                        <pre class="metric-raw-json-box" id="m1-docket-raw"></pre>
+                    </div>
+                </div>
+
+                <div class="card-surface visualizer-card">
+                    <div class="card-topbar">
+                        <div class="card-heading">
+                            <span>📊 Visualizer Workbench</span>
+                        </div>
+                        <span class="badge-clean success">Live Rendering</span>
+                    </div>
+
+                    <!-- Embedded High-Tech Lab Testing Visual Image -->
+                    <div class="lab-testing-visual-card">
+                        <img src="img/food_lab_testing.jpg" alt="FSSAI NABL Microbial Assay Lab" class="lab-testing-visual-img">
+                        <div class="lab-testing-visual-tag">🔬 BIOLOGICAL HAZARD AUDIT SUITE</div>
+                    </div>
+
+                    <div id="m1-visualizer-workbench">
+                        <div style="text-align:center; padding:30px 20px; color:var(--text-muted);">
+                            Click <strong>Aho-Corasick Multi-Hazard</strong> or <strong>KMP Search</strong> to visualize matched biological pathogens.
+                        </div>
+                    </div>
+
+                    <!-- FSSAI Microbial Breakdown Chart -->
+                    <div id="m1-pathogen-stats-workbench"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             MODULE 2: SUFFIX STRUCTURES (M2 – CO2)
+             =================================================================== -->
+        <section id="module2-section" class="module-section">
+            <div class="application-hero-card">
+                <div>
+                    <div class="app-hero-header">
+                        <span>🚢 Certification & Trade Audit • M2 – CO2</span>
+                    </div>
+                    <div class="app-hero-desc">
+                        Suffix Arrays, Kasai LCP, and Suffix Automata rapidly verify organic claims, detect boilerplate duplication, and index shipping charters.
+                    </div>
+                </div>
+                <div class="app-hero-tags">
+                    <span class="badge-tag-clean highlight">Suffix Array: O(n log n)</span>
+                    <span class="badge-tag-clean">Kasai LCP: O(n)</span>
+                    <span class="badge-tag-clean">Suffix Automaton: O(n)</span>
+                </div>
+            </div>
+
+            <div class="workbench-grid">
+                <div class="card-surface">
+                    <div class="card-topbar">
+                        <div class="card-heading">
+                            <span>📑 Contract Indexer & Query Controls</span>
+                        </div>
+                        <button id="btn-m2-load-sample" class="btn-brand-secondary" style="padding:4px 10px; font-size:11px;" type="button">
+                            Reset Sample
+                        </button>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-label-row">
+                            <label for="m2-doc-text">Inspection Document Text</label>
+                            <span class="hint">MULTI-PARAGRAPH</span>
+                        </div>
+                        <textarea id="m2-doc-text" class="form-input-clean" rows="6">MARINE INSPECTION PROTOCOL: Shipment SHIP-TX-9021-SEA from Pacific Blue Ocean Fisheries. 
+Testing performed for heavy metals, listeria monocytogenes, and microbial histamine formation. 
+SAMPLES: Batch 04A and 04B demonstrated core muscle temperature maintained at -0.8°C throughout maritime transit. 
+CRITICAL FINDING: No detectable listeria, no chemical pesticide residues, and mercury levels remain well below 0.1 ppm threshold. 
+Batch cleared for immediate wholesale cold-chain distribution to regional metropolitan supermarket chains.</textarea>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-label-row">
+                            <label for="m2-search-term">Automaton Substring Validation Query</label>
+                            <span class="hint">SUB-MILLISECOND CHECK</span>
+                        </div>
+                        <input type="text" id="m2-search-term" class="form-input-clean" value="listeria" placeholder="e.g. listeria, maritime, cold-chain">
+                    </div>
+
+                    <div class="btn-row">
+                        <button id="btn-m2-index" class="btn-brand-primary" type="button">
+                            <span>⚡ Index Document & Build Suffix Array</span>
+                        </button>
+                        <button id="btn-m2-kasai" class="btn-brand-secondary" type="button">
+                            <span>Compute Kasai LCP</span>
+                        </button>
+                    </div>
+
+                    <div id="m2-docket" class="execution-metric-panel" style="display:none;">
+                        <div class="metric-panel-header">
+                            <span class="metric-panel-title">TELEMETRY & ALGORITHM PROFILE</span>
+                            <span class="metric-pill-status">HTTP 200 OK</span>
+                        </div>
+                        <div class="metric-stat-row">
+                            <div class="metric-stat-box"><div class="metric-stat-label">Execution Time</div><div class="metric-stat-num emerald" id="m2-metric-time">0.00 ms</div></div>
+                            <div class="metric-stat-box"><div class="metric-stat-label">Precise Nanos</div><div class="metric-stat-num cyan" id="m2-metric-nanos">0 ns</div></div>
+                            <div class="metric-stat-box"><div class="metric-stat-label">Client Latency</div><div class="metric-stat-num amber" id="m2-metric-latency">0 ms</div></div>
+                        </div>
+                        <div class="metric-summary-text" id="m2-docket-summary"></div>
+                        <pre class="metric-raw-json-box" id="m2-docket-raw"></pre>
+                    </div>
+                </div>
+
+                <div class="card-surface visualizer-card">
+                    <div class="card-topbar">
+                        <div class="card-heading">
+                            <span>📊 Suffix Array & Kasai LCP Workbench</span>
+                        </div>
+                        <span class="badge-clean info">Lexicographical Order</span>
+                    </div>
+                    <div id="m2-visualizer-workbench">
+                        <div style="text-align:center; padding:50px 20px; color:var(--text-muted);">
+                            Click <strong>Index Document & Build Suffix Array</strong> to generate sorted suffix indices.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             MODULE 3: DYNAMIC PROGRAMMING (M3 – CO3)
+             =================================================================== -->
+        <section id="module3-section" class="module-section">
+            <div class="application-hero-card">
+                <div>
+                    <div class="app-hero-header">
+                        <span>🚁 Relief Cargo & Pipeline Optimization • M3 – CO3</span>
+                    </div>
+                    <div class="app-hero-desc">
+                        Assembles maximum-nutrition emergency cargo bundles (Bitmask DP), fuzzy catalog autocorrect (Damerau-Levenshtein), and Matrix-Chain pipeline scheduling.
+                    </div>
+                </div>
+                <div class="app-hero-tags">
+                    <span class="badge-tag-clean highlight">Bitmask DP: O(2ⁿ)</span>
+                    <span class="badge-tag-clean">Damerau: O(m × n)</span>
+                    <span class="badge-tag-clean">MCM: O(n³)</span>
+                    <span class="badge-tag-clean">OBST: O(n³)</span>
+                </div>
+            </div>
+
+            <div class="workbench-grid">
+                <div class="card-surface">
+                    <div class="card-topbar">
+                        <div class="card-heading">
+                            <span>⚡ Interactive Optimization Controls</span>
+                        </div>
+                        <span class="badge-clean purple">Multi-Model DP</span>
+                    </div>
+
+                    <!-- Autocorrect -->
+                    <div class="input-group">
+                        <div class="input-label-row">
+                            <label for="m3-query-input">Fuzzy Manifest Catalog Search</label>
+                            <span class="hint">DAMERAU-LEVENSHTEIN</span>
+                        </div>
+                        <div style="display:flex; gap:8px;">
+                            <input type="text" id="m3-query-input" class="form-input-clean" value="organc spinch" placeholder="e.g. organc spinch, pasific slamon">
+                            <button id="btn-m3-autocorrect" class="btn-brand-primary" type="button" style="white-space:nowrap;">
+                                Autocorrect
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Bitmask DP Relief Package -->
+                    <div class="input-group" style="margin-top:20px; padding-top:16px; border-top:1px solid var(--border-color);">
+                        <div class="input-label-row">
+                            <label>Emergency Relief Cargo Optimization (Bitmask DP)</label>
+                            <span class="hint">NUTRITION MAXIMIZER</span>
+                        </div>
+                        <div style="margin-bottom:12px;">
+                            <div class="input-label-row">
+                                <span style="font-size:12px;">Air-Drop Max Payload Weight:</span>
+                                <span class="slider-val-tag" id="m3-weight-val">50 kg</span>
+                            </div>
+                            <div class="slider-control-box">
+                                <input type="range" id="m3-weight-slider" min="15" max="80" value="50" step="5">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="input-label-row">
+                                <span style="font-size:12px;">Emergency Relief Budget Cap:</span>
+                                <span class="slider-val-tag" id="m3-budget-val">₹12,500</span>
+                            </div>
+                            <div class="slider-control-box">
+                                <input type="range" id="m3-budget-slider" min="3000" max="40000" value="12500" step="500">
+                            </div>
+                        </div>
+                        <div style="margin-top:12px;">
+                            <button id="btn-m3-bundle" class="btn-brand-primary" type="button" style="width:100%;">
+                                <span>📦 Optimize Cargo Relief Package</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- MCM & OBST -->
+                    <div class="input-group" style="margin-top:20px; padding-top:16px; border-top:1px solid var(--border-color);">
+                        <div class="input-label-row">
+                            <label>Supply Pipeline & Catalog Topology</label>
+                            <span class="hint">MCM & OBST</span>
+                        </div>
+                        <div class="btn-row" style="margin-top:8px;">
+                            <button id="btn-m3-mcm" class="btn-brand-secondary" type="button">
+                                <span>Matrix-Chain Pipeline</span>
+                            </button>
+                            <button id="btn-m3-obst" class="btn-brand-secondary" type="button">
+                                <span>Popularity OBST Tree</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="m3-docket" class="execution-metric-panel" style="display:none;">
+                        <div class="metric-panel-header">
+                            <span class="metric-panel-title">TELEMETRY & ALGORITHM PROFILE</span>
+                            <span class="metric-pill-status">HTTP 200 OK</span>
+                        </div>
+                        <div class="metric-stat-row">
+                            <div class="metric-stat-box"><div class="metric-stat-label">Execution Time</div><div class="metric-stat-num emerald" id="m3-metric-time">0.00 ms</div></div>
+                            <div class="metric-stat-box"><div class="metric-stat-label">Precise Nanos</div><div class="metric-stat-num cyan" id="m3-metric-nanos">0 ns</div></div>
+                            <div class="metric-stat-box"><div class="metric-stat-label">Client Latency</div><div class="metric-stat-num amber" id="m3-metric-latency">0 ms</div></div>
+                        </div>
+                        <div class="metric-summary-text" id="m3-docket-summary"></div>
+                        <pre class="metric-raw-json-box" id="m3-docket-raw"></pre>
+                    </div>
+                </div>
+
+                <div class="card-surface visualizer-card">
+                    <div class="card-topbar">
+                        <div class="card-heading">
+                            <span>📊 Dynamic Programming Workbench</span>
+                        </div>
+                        <span class="badge-clean success">Optimal Substructure</span>
+                    </div>
+                    <div id="m3-visualizer-workbench">
+                        <div style="text-align:center; padding:50px 20px; color:var(--text-muted);">
+                            Select <strong>Optimize Cargo Relief Package</strong> to generate optimal DP knapsack packing.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             MODULE 4: NETWORK FLOW (M4 – CO4)
+             =================================================================== -->
+        <section id="module4-section" class="module-section">
+            <div class="application-hero-card">
+                <div>
+                    <div class="app-hero-header">
+                        <span>🌊 Intermodal Cold-Chain Routing • M4 – CO4</span>
+                    </div>
+                    <div class="app-hero-desc">
+                        Dinic max-flow maximizes intermodal tonnage throughput; Edmonds-Karp isolates vulnerable bottleneck cuts in polynomial time.
+                    </div>
+                </div>
+                <div class="app-hero-tags">
+                    <span class="badge-tag-clean highlight">Dinic Flow: O(V²E)</span>
+                    <span class="badge-tag-clean">Edmonds-Karp: O(VE²)</span>
+                    <span class="badge-tag-clean">Max Bipartite Matching</span>
+                </div>
+            </div>
+
+            <div class="workbench-grid">
+                <div class="card-surface">
+                    <div class="card-topbar">
+                        <div class="card-heading">
+                            <span>🚛 Network Flow & Dispatch Controls</span>
+                        </div>
+                        <span class="badge-clean info">8-Node Corridor</span>
+                    </div>
+
+                    <div style="margin-bottom:16px; font-size:13px; color:var(--text-secondary); line-height:1.6;">
+                        Simulates an 8-stage corridor: <strong>Farms ➔ Depots ➔ Cold Warehouses ➔ Port Docks ➔ Market Sink</strong>.
+                    </div>
+
+                    <div class="btn-row" style="margin-top:0;">
+                        <button id="btn-m4-dinic" class="btn-brand-primary" type="button">
+                            <span>⚡ Dinic's Multi-Tier Flow (Max Throughput)</span>
+                        </button>
+                        <button id="btn-m4-edmonds" class="btn-brand-secondary" type="button">
+                            <span>Edmonds-Karp & Min-Cut Bottlenecks</span>
+                        </button>
+                        <button id="btn-m4-bipartite" class="btn-brand-secondary" type="button">
+                            <span>Bipartite Producer-Warehouse Allocation</span>
+                        </button>
+                    </div>
+
+                    <div id="m4-docket" class="execution-metric-panel" style="display:none; margin-top:20px;">
+                        <div class="metric-panel-header">
+                            <span class="metric-panel-title">TELEMETRY & ALGORITHM PROFILE</span>
+                            <span class="metric-pill-status">HTTP 200 OK</span>
+                        </div>
+                        <div class="metric-stat-row">
+                            <div class="metric-stat-box"><div class="metric-stat-label">Execution Time</div><div class="metric-stat-num emerald" id="m4-metric-time">0.00 ms</div></div>
+                            <div class="metric-stat-box"><div class="metric-stat-label">Precise Nanos</div><div class="metric-stat-num cyan" id="m4-metric-nanos">0 ns</div></div>
+                            <div class="metric-stat-box"><div class="metric-stat-label">Client Latency</div><div class="metric-stat-num amber" id="m4-metric-latency">0 ms</div></div>
+                        </div>
+                        <div class="metric-summary-text" id="m4-docket-summary"></div>
+                        <pre class="metric-raw-json-box" id="m4-docket-raw"></pre>
+                    </div>
+                </div>
+
+                <div class="card-surface visualizer-card">
+                    <div class="card-topbar">
+                        <div class="card-heading">
+                            <span>📊 Network Flow Graph & Allocation</span>
+                        </div>
+                        <span class="badge-clean success">Interactive SVG</span>
+                    </div>
+                    <div id="m4-visualizer-workbench">
+                        <div style="text-align:center; padding:50px 20px; color:var(--text-muted);">
+                            Click <strong>Dinic's Multi-Tier Flow</strong> to render SVG freight conduits.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             MODULE 5: NP-COMPLETENESS (M5 – CO5)
+             =================================================================== -->
+        <section id="module5-section" class="module-section">
+            <div class="application-hero-card">
+                <div>
+                    <div class="app-hero-header">
+                        <span>🛡️ Storage Safety & Contamination Isolation • M5 – CO5</span>
+                    </div>
+                    <div class="app-hero-desc">
+                        Verifies 3-SAT food storage rules, computes Maximum Independent Set for safe co-storage, and selects minimal inspection hubs via 2-Approx Vertex Cover.
+                    </div>
+                </div>
+                <div class="app-hero-tags">
+                    <span class="badge-tag-clean highlight">3-SAT Verification: NP-Complete</span>
+                    <span class="badge-tag-clean">Independent Set vs Vertex Cover</span>
+                    <span class="badge-tag-clean">2-Approximation Hubs</span>
+                </div>
+            </div>
+
+            <div class="workbench-grid">
+                <div class="card-surface">
+                    <div class="card-topbar">
+                        <div class="card-heading">
+                            <span>⚖️ Safety Rule Engine & Constraints</span>
+                        </div>
+                        <span class="badge-clean danger">Safety Critical</span>
+                    </div>
+
+                    <div style="margin-bottom:16px; font-size:13px; color:var(--text-secondary); line-height:1.6;">
+                        Produce compatibility analysis across 7 agricultural items (Apples, Spinach, Salmon, Milk, Potatoes, Strawberries, Wheat).
+                    </div>
+
+                    <div class="btn-row" style="margin-top:0;">
+                        <button id="btn-m5-conflict" class="btn-brand-primary" type="button">
+                            <span>⚡ Max Independent Set (Safe Co-Storage)</span>
+                        </button>
+                        <button id="btn-m5-3sat" class="btn-brand-secondary" type="button">
+                            <span>Verify 3-SAT Storage Rules</span>
+                        </button>
+                        <button id="btn-m5-vc" class="btn-brand-secondary" type="button">
+                            <span>Strategic Checkpoints (2-Approx)</span>
+                        </button>
+                    </div>
+
+                    <div id="m5-docket" class="execution-metric-panel" style="display:none; margin-top:20px;">
+                        <div class="metric-panel-header">
+                            <span class="metric-panel-title">TELEMETRY & ALGORITHM PROFILE</span>
+                            <span class="metric-pill-status">HTTP 200 OK</span>
+                        </div>
+                        <div class="metric-stat-row">
+                            <div class="metric-stat-box"><div class="metric-stat-label">Execution Time</div><div class="metric-stat-num emerald" id="m5-metric-time">0.00 ms</div></div>
+                            <div class="metric-stat-box"><div class="metric-stat-label">Precise Nanos</div><div class="metric-stat-num cyan" id="m5-metric-nanos">0 ns</div></div>
+                            <div class="metric-stat-box"><div class="metric-stat-label">Client Latency</div><div class="metric-stat-num amber" id="m5-metric-latency">0 ms</div></div>
+                        </div>
+                        <div class="metric-summary-text" id="m5-docket-summary"></div>
+                        <pre class="metric-raw-json-box" id="m5-docket-raw"></pre>
+                    </div>
+                </div>
+
+                <div class="card-surface visualizer-card">
+                    <div class="card-topbar">
+                        <div class="card-heading">
+                            <span>📊 Conflict Analysis & Safe Storage Set</span>
+                        </div>
+                        <span class="badge-clean success">Cross-Contamination Safe</span>
+                    </div>
+                    <div id="m5-visualizer-workbench">
+                        <div style="text-align:center; padding:50px 20px; color:var(--text-muted);">
+                            Click <strong>Max Independent Set</strong> to identify safe co-storage groupings.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             MODULE 6: RANDOMIZED & PARALLEL (M6 – CO6)
+             =================================================================== -->
+        <section id="module6-section" class="module-section">
+            <div class="application-hero-card">
+                <div>
+                    <div class="app-hero-header">
+                        <span>📡 IoT Stream Analytics & Parallel Scan • M6 – CO6</span>
+                    </div>
+                    <div class="app-hero-desc">
+                        Reservoir Sampling monitors unbounded truck telematics, Miller-Rabin validates digital lot hashes, and Blelloch's parallel scan computes depletion curves in O(log n) span.
+                    </div>
+                </div>
+                <div class="app-hero-tags">
+                    <span class="badge-tag-clean highlight">Reservoir Sampling: O(N)</span>
+                    <span class="badge-tag-clean">Randomized QuickSort: O(n log n)</span>
+                    <span class="badge-tag-clean">Miller-Rabin: Cryptographic</span>
+                    <span class="badge-tag-clean">Blelloch Scan: Span O(log n)</span>
+                </div>
+            </div>
+
+            <div class="workbench-grid">
+                <div class="card-surface">
+                    <div class="card-topbar">
+                        <div class="card-heading">
+                            <span>📊 Real-Time Stream & Parallel Analytics</span>
+                        </div>
+                        <span class="badge-clean info">High Throughput</span>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-label-row">
+                            <label>Continuous IoT Telematics Reservoir (k Samples)</label>
+                            <span class="slider-val-tag" id="m6-k-val">k = 4</span>
+                        </div>
+                        <div class="slider-control-box">
+                            <input type="range" id="m6-k-slider" min="2" max="8" value="4" step="1">
+                        </div>
+                        <div style="margin-top:8px;">
+                            <button id="btn-m6-reservoir" class="btn-brand-primary" type="button" style="width:100%;">
+                                <span>⚡ Sample Continuous IoT Sensor Stream</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="input-group" style="margin-top:16px; padding-top:14px; border-top:1px solid var(--border-color);">
+                        <div class="input-label-row">
+                            <label for="m6-lot-input">Cryptographic Food Lot Signature Hash</label>
+                            <span class="hint">MILLER-RABIN</span>
+                        </div>
+                        <div style="display:flex; gap:8px;">
+                            <input type="text" id="m6-lot-input" class="form-input-clean" value="104729" placeholder="e.g. 104729">
+                            <button id="btn-m6-mr" class="btn-brand-secondary" type="button" style="white-space:nowrap;">
+                                Verify Lot
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="btn-row" style="margin-top:16px; padding-top:14px; border-top:1px solid var(--border-color);">
+                        <button id="btn-m6-blelloch" class="btn-brand-primary" type="button">
+                            <span>Blelloch 24h Depletion Curve</span>
+                        </button>
+                        <button id="btn-m6-quicksort" class="btn-brand-secondary" type="button">
+                            <span>Randomized QuickSort</span>
+                        </button>
+                        <button id="btn-m6-brent" class="btn-brand-secondary" type="button">
+                            <span>Brent's Speedup</span>
+                        </button>
+                    </div>
+
+                    <div id="m6-docket" class="execution-metric-panel" style="display:none; margin-top:20px;">
+                        <div class="metric-panel-header">
+                            <span class="metric-panel-title">TELEMETRY & ALGORITHM PROFILE</span>
+                            <span class="metric-pill-status">HTTP 200 OK</span>
+                        </div>
+                        <div class="metric-stat-row">
+                            <div class="metric-stat-box"><div class="metric-stat-label">Execution Time</div><div class="metric-stat-num emerald" id="m6-metric-time">0.00 ms</div></div>
+                            <div class="metric-stat-box"><div class="metric-stat-label">Precise Nanos</div><div class="metric-stat-num cyan" id="m6-metric-nanos">0 ns</div></div>
+                            <div class="metric-stat-box"><div class="metric-stat-label">Client Latency</div><div class="metric-stat-num amber" id="m6-metric-latency">0 ms</div></div>
+                        </div>
+                        <div class="metric-summary-text" id="m6-docket-summary"></div>
+                        <pre class="metric-raw-json-box" id="m6-docket-raw"></pre>
+                    </div>
+                </div>
+
+                <div class="card-surface visualizer-card">
+                    <div class="card-topbar">
+                        <div class="card-heading">
+                            <span>📊 Streaming & Parallel Workbench</span>
+                        </div>
+                        <span class="badge-clean success">Live Sensor Telemetry</span>
+                    </div>
+                    <div id="m6-visualizer-workbench">
+                        <div style="text-align:center; padding:50px 20px; color:var(--text-muted);">
+                            Click <strong>Sample Continuous IoT Sensor Stream</strong> to view real-time data visualizers.
+                        </div>
+                    </div>
+                    <div id="m6-telemetry-workbench" style="margin-top:16px;"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =======================================================================
+         FLOATING AMBIENT STUDIO TRIGGER & SIDEBAR
+         ======================================================================= -->
+    <button id="btn-toggle-sidebar" class="sidebar-floating-toggle" type="button" title="Open Ambient Studio & Lighting">
+        <span class="ambient-pulse-indicator"></span>
+        <span style="font-size:16px;">🎨</span>
+        <span class="toggle-text">Ambient Studio</span>
+    </button>
+
+    <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+    <aside id="ambient-sidebar" class="ambient-sidebar" aria-label="Ambient Lighting & Theme Studio">
+        <div class="sidebar-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+                <span style="font-size:18px;">💡</span>
+                <h3 style="font-size:15px; font-weight:800; color:var(--text-primary); margin:0;">Ambient Studio</h3>
+            </div>
+            <button id="btn-close-sidebar" class="sidebar-close-btn" type="button">✕</button>
+        </div>
+
+        <div class="sidebar-content">
+            <!-- Mode Switcher (Dark / Light) -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">DISPLAY MODE</div>
+                <div class="mode-toggle-group">
+                    <button id="btn-mode-dark" class="mode-btn active" type="button">
+                        <span>🌙 Dark Ambient</span>
+                    </button>
+                    <button id="btn-mode-light" class="mode-btn" type="button">
+                        <span>☀️ Clean Light</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Brightness Slider -->
+            <div class="sidebar-section">
+                <div class="sidebar-label-row">
+                    <span>Screen Brightness</span>
+                    <span class="sidebar-val-tag" id="sidebar-brightness-val">100%</span>
+                </div>
+                <input type="range" id="sidebar-brightness-slider" min="65" max="135" value="100" step="5" class="sidebar-slider">
+            </div>
+
+            <!-- Ambient Lighting Palettes -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">AMBIENT LIGHTING THEMES</div>
+                <div class="ambient-palette-grid">
+                    <button class="ambient-theme-card active" data-theme-set="cosmic" type="button">
+                        <span class="ambient-swatch" style="background:linear-gradient(135deg, #8b5cf6, #06b6d4);"></span>
+                        <span class="ambient-theme-label">Aurora Borealis</span>
+                    </button>
+                    <button class="ambient-theme-card" data-theme-set="emerald" type="button">
+                        <span class="ambient-swatch" style="background:linear-gradient(135deg, #10b981, #84cc16);"></span>
+                        <span class="ambient-theme-label">Bio-Emerald</span>
+                    </button>
+                    <button class="ambient-theme-card" data-theme-set="sunset" type="button">
+                        <span class="ambient-swatch" style="background:linear-gradient(135deg, #f43f5e, #f59e0b);"></span>
+                        <span class="ambient-theme-label">Cyber Sunset</span>
+                    </button>
+                    <button class="ambient-theme-card" data-theme-set="ocean" type="button">
+                        <span class="ambient-swatch" style="background:linear-gradient(135deg, #0284c7, #2dd4bf);"></span>
+                        <span class="ambient-theme-label">Deep Azure</span>
+                    </button>
+                    <button class="ambient-theme-card" data-theme-set="amethyst" type="button">
+                        <span class="ambient-swatch" style="background:linear-gradient(135deg, #a855f7, #d946ef);"></span>
+                        <span class="ambient-theme-label">Royal Amethyst</span>
+                    </button>
+                    <button class="ambient-theme-card" data-theme-set="amber" type="button">
+                        <span class="ambient-swatch" style="background:linear-gradient(135deg, #f59e0b, #d97706);"></span>
+                        <span class="ambient-theme-label">Warm Candlelight</span>
+                    </button>
+                    <button class="ambient-theme-card" data-theme-set="cyberpunk" type="button">
+                        <span class="ambient-swatch" style="background:linear-gradient(135deg, #00ff88, #ff007f);"></span>
+                        <span class="ambient-theme-label">Hyper Cyberpunk</span>
+                    </button>
+                    <button class="ambient-theme-card" data-theme-set="white" type="button">
+                        <span class="ambient-swatch" style="background:#ffffff; border:1px solid #cbd5e1; box-shadow:0 1px 3px rgba(0,0,0,0.1);"></span>
+                        <span class="ambient-theme-label">⚪ Pristine White</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Custom Accent Tint -->
+            <div class="sidebar-section">
+                <div class="sidebar-label-row">
+                    <span>Custom Accent Tint</span>
+                    <input type="color" id="sidebar-color-picker" value="#8b5cf6" style="border:none; width:28px; height:28px; border-radius:50%; cursor:pointer; background:none;">
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- =======================================================================
+         FULL SYSTEM BENCHMARK MODAL
+         ======================================================================= -->
+    <div id="benchmark-modal" class="modal-wrapper" role="dialog" aria-modal="true">
+        <div class="modal-box">
+            <div class="modal-header-top">
+                <h3>⚡ Comprehensive System Diagnostic & Algorithmic Benchmark</h3>
+                <button id="btn-close-modal" class="modal-close-cross" type="button">✕</button>
+            </div>
+            <div class="modal-content-scroll">
+                <p style="color:var(--text-secondary); margin-bottom:16px; font-size:13px;">
+                    Executes end-to-end algorithmic routines across all 6 core modules synchronously using production agricultural datasets:
+                </p>
+                <div style="margin-bottom:16px;">
+                    <button id="btn-execute-all-benchmarks" class="btn-brand-primary" type="button" style="width:100%; justify-content:center;">
+                        <span>🚀 Run Full Multi-Module Benchmark Suite</span>
+                    </button>
+                </div>
+                <div id="benchmark-results-container">
+                    <div style="text-align:center; padding:40px 20px; color:var(--text-muted); background:var(--bg-subtle); border-radius:8px;">
+                        Click the button above to execute all 6 algorithm benchmarks simultaneously.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         LIVE SUPPLY CATALOG MODAL
+         ======================================================================= -->
+    <div id="catalog-modal" class="modal-wrapper" role="dialog" aria-modal="true">
+        <div class="modal-box" style="max-width:960px;">
+            <div class="modal-header-top">
+                <h3>📦 FoodChain Live Agricultural & Fleet Catalog</h3>
+                <button id="btn-close-catalog-modal" class="modal-close-cross" type="button">✕</button>
+            </div>
+            <div class="modal-content-scroll">
+                <div id="catalog-content-container">
+                    <div style="text-align:center; padding:30px;"><span class="loader-spin"></span> Loading active food supply records...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         ENTERPRISE FOOTER
+         ======================================================================= -->
+    <footer class="page-footer">
+        <div class="container">
+            <div style="font-weight:700; color:var(--text-primary); margin-bottom:4px;">FoodChain – Food Supply & Distribution Management Platform</div>
+            <div style="font-size:12px; color:var(--text-muted);">
+                Predictive Biological Kinetics • Dynamic Arrhenius Spoilage • Advanced Modules M1 through M6
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/visualizers.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
